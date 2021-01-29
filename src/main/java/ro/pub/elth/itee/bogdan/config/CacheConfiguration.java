@@ -48,6 +48,8 @@ public class CacheConfiguration {
             createCache(cm, ro.pub.elth.itee.bogdan.domain.User.class.getName());
             createCache(cm, ro.pub.elth.itee.bogdan.domain.Authority.class.getName());
             createCache(cm, ro.pub.elth.itee.bogdan.domain.User.class.getName() + ".authorities");
+            createCache(cm, ro.pub.elth.itee.bogdan.domain.Disciplina.class.getName());
+            createCache(cm, ro.pub.elth.itee.bogdan.domain.Nota.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -22,10 +22,24 @@ logging:
 spring:
   profiles:
     active: dev
+
+    # Mail server config:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jhipster2020@gmail.com
+    password: Parola123!
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
+
     include:
       - swagger
       # Uncomment to activate TLS for the dev profile
-      #- tls
+      - tls
   devtools:
     restart:
       enabled: true
@@ -51,12 +65,8 @@ spring:
     show-sql: true
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
-    contexts: dev, faker
-  mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    contexts: dev
+
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
